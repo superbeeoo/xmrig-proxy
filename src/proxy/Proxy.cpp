@@ -125,7 +125,7 @@ void Proxy::printHashrate()
 {
     LOG_INFO(Options::i()->colors() ? "\x1B[01;32m* \x1B[01;37mspeed\x1B[0m \x1B[01;30m(1m) \x1B[01;36m%03.1f\x1B[0m, \x1B[01;30m(10m) \x1B[01;36m%03.1f\x1B[0m, \x1B[01;30m(1h) \x1B[01;36m%03.1f\x1B[0m, \x1B[01;30m(12h) \x1B[01;36m%03.1f\x1B[0m, \x1B[01;30m(24h) \x1B[01;36m%03.1f kH/s"
                                     : "* speed (1m) %03.1f, (10m) %03.1f, (1h) %03.1f, (12h) %03.1f, (24h) %03.1f kH/s",
-             m_stats.hashrate(60), m_stats.hashrate(600), m_stats.hashrate(3600), m_stats.hashrate(3600 * 12), m_stats.hashrate(3600 * 24));
+             m_stats.hashrate(60*1000), m_stats.hashrate(600*1000), m_stats.hashrate(3600*1000), m_stats.hashrate(3600 * 12*1000), m_stats.hashrate(3600 * 24*1000));
 }
 
 
